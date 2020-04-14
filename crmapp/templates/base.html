@@ -1,0 +1,149 @@
+<!doctype html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.css" integrity="sha256-YC896To53D/eet6K3jAwOq67iCIK24u2Hg6CQ+026I8=" crossorigin="anonymous" />
+
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+
+
+
+   <title>  {% block title %} SPTECHGURU  {% endblock title %}    </title>
+
+  <style>
+        {% block css %}
+
+
+     button
+{
+
+      background: linear-gradient(57deg, #00C6A7 , #1E4D92);
+      border-radius: 50px;
+
+}
+
+
+button:hover{
+      background: linear-gradient(57deg, red, gold );
+      border-radius: 50%;
+
+}
+
+
+  * {
+    margin: 0px;
+    padding: 0px;
+   font-family: 'Kaushan Script', cursive;
+}
+ ul
+ {
+  list-style: none;
+ }
+
+ ul li
+ {
+  text-decoration: none;
+
+ }
+ul li a
+{
+  font-size: 20px;
+}
+h1
+{
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+
+.bgimag{
+  background-image: url({% static 'img/sp5.jpg' %});
+  background-size: cover;
+ }
+
+label
+{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+    {% endblock %}
+
+    </style>
+  </head>
+  <body>
+
+<section class="container-fluid bg-info">
+  <div class="">
+   <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand text-white font-weight-bold animated infinite flash" href="/"><h2>
+  SPTECH_API</h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse text-white text-uppercase" id="navbarSupportedContent">
+
+    <ul class="navbar-nav ml-auto text-white">
+      <li class="nav-item">
+        <h4><a class="nav-link text-white font-weight-bold" href="/api/account"> Account <span class="sr-only">(current)</span></a></h4>
+      </li>
+      <li class="nav-item ">
+        <h4> <a class="nav-link text-white font-weight-bold" href="/api/account">Contact</a></h4>
+      </li>
+      <li class="nav-item {% block blogactive %} {% endblock blogactive %}">
+        <h4> <a class="nav-link text-white font-weight-bold" href="/api/ContactStatus">ContactStatus</a></h4>
+      </li>
+
+   <!--    <li class="nav-item">
+       <h4> <a class="nav-link text-white font-weight-bold mr-3" href="/contact">Activities</a></h4>
+      </li>
+ -->
+            <li class="nav-item">
+       <h4> <a class="nav-link text-white font-weight-bold mr-3" href="/api/contactsources">contactsources</a></h4>
+      </li>
+
+      </ul>
+</section>
+
+ 
+
+
+{% block body %}
+
+{% endblock body %}
+
+
+<!--  -->
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
